@@ -1,14 +1,20 @@
 import { Router } from "express";
-import { pool } from "../db.js";
+import { getAllCanciones, getCancionDetailById, getCancionesByNombre, getNumeroWhatsapp, getUrlDemoState } from "../controllers/canciones.controllers.js";
 
 const router = Router();
-
-//Lista de API's para canciones.
-
+//API's para canciones.
+/**
+ * 
+*/
 //Obtener todas las canciones
-router.get('/cancion',(req,res) =>{
-    res.send('Obteniendo canciones')
-})
-
+router.get('/',getAllCanciones);
+//Buscar canciones por nombre de artista o cancion.
+router.get('/buscar/:nombre',getCancionesByNombre);
+//Obtener el detalle de una canción.
+router.get('/detalle/:id',getCancionDetailById );
+//Obtener el estado de UrlDemo.
+router.get('/urlDemo/',getUrlDemoState);
+//Obtener el número de whatsapp para envio de pedidos.
+router.get('/whatsapp/',getNumeroWhatsapp);
 
 export default router;
