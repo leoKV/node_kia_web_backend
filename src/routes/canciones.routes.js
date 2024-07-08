@@ -9,9 +9,9 @@ const router = Router();
 //Obtener todas las canciones
 router.get('/',getAllCanciones);
 //Buscar canciones por nombre de artista o cancion.
-router.get('/buscar/:nombre',getCancionesByNombre);
+router.get('/buscar/',getCancionesByNombre);
 //Obtener el detalle de una canción.
-router.get('/detalle/:id',getCancionDetailById );
+router.get('/detalle/',getCancionDetailById );
 //Obtener el estado de UrlDemo.
 router.get('/urlDemo/',getUrlDemoState);
 //Obtener el número de whatsapp para envio de pedidos.
