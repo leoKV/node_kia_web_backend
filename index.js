@@ -1,9 +1,9 @@
 import express from 'express';
 import cors from 'cors';
-import { PORT } from './config.js';
-import cancionRoutes from './routes/canciones.routes.js';
-import cancionTagRoutes from './routes/canciones-tag.routes.js';
-import tagRoutes from './routes/tags.routes.js';
+import { PORT } from './src/config.js';
+import cancionRoutes from './src/routes/canciones.routes.js';
+import cancionTagRoutes from './src/routes/canciones-tag.routes.js';
+import tagRoutes from './src/routes/tags.routes.js';
 
 const app = express();
 
